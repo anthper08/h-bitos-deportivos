@@ -167,6 +167,54 @@ body {
         width: 200px;
     }
 }
+/* ===== MEJORAS MOVIL ===== */
+@media (max-width: 900px) {
+
+    /* HEADER ORDENADO */
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero-landing {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+        background-size: 220px;
+        background-position: top center;
+    }
+
+    /* BOTONES EN COLUMNA */
+    .landing-botones,
+    .Botones2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .landing-botones a,
+    .Botones2 a {
+        width: 80%;              /* mismo ancho */
+        text-align: center;
+    }
+
+    /* TEXTO */
+    .landing-contenido h1 {
+        font-size: 28px;
+    }
+
+    .landing-contenido p {
+        font-size: 15px;
+    }
+}
 
  /*----------------------------------------------------------pagina 1---------------------------------------------*/
  .pag1-errores {

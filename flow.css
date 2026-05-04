@@ -1,34 +1,45 @@
-/* ===== HERO LANDING SOLO PAGINA PRINCIPAL ===== */
-body { font-family: Arial, sans-serif;
-     background: #0f172a; 
-     color: white; 
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
 
-    /* HEADER */ 
-    .header { display: grid; 
-        grid-template-columns: auto 1fr auto; /* izquierda - centro - derecha */ 
-        align-items: center;
-         padding: 20px 60px;
-          background: linear-gradient(135deg, #1e3a8a, #2563eb);
-          position: sticky;
-           top: 0; 
-           z-index: 1000; 
-        }
+/* HEADER */
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 20px 60px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
+/* HERO */
 .hero-landing {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 120px 80px;
+    padding: 100px 60px;
     min-height: 90vh;
-    gap: 60px;
+    gap: 40px;
 
     background-image: url(portada.png);
     background-repeat: no-repeat;
-    background-size: 550px;
+    background-size: 500px;
     background-position: right center;
+}
 
-    border: 10px solid rgba(255, 0, 0, 0.507);   /* contorno blanco */
+/* TEXTO CON CONTORNO AZUL */
+.landing-contenido h1,
+.landing-contenido p {
+    color: white;
+    text-shadow:
+        -1px -1px 0 #00bfff,
+         1px -1px 0 #00bfff,
+        -1px  1px 0 #00bfff,
+         1px  1px 0 #00bfff;
 }
 
 .landing-contenido {
@@ -47,12 +58,8 @@ body { font-family: Arial, sans-serif;
     margin-bottom: 30px;
 }
 
-/* BOTONES mismo estilo que los originales */
-.landing-botones {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+/* BOTONES */
+.landing-botones,
 .Botones2 {
     display: flex;
     gap: 20px;
@@ -63,36 +70,35 @@ body { font-family: Arial, sans-serif;
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
-    background: transparent;          /* sin fondo */
-    border: 2px solid #052979;        /* solo contorno */
-    color: #000000;                   /* texto celeste */
+    background: transparent;
+    border: 2px solid #052979;
+    color: #000;
     transition: 0.3s;
 }
+
 .Botones2 a:hover {
-    background: rgb(61, 59, 59);              /* se rellena al pasar el mouse */
+    background: rgb(61, 59, 59);
     color: white;
     transform: translateY(-5px);
 }
-
 
 .landing-botones a {
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
-    background: transparent;          /* sin fondo */
-    border: 2px solid #38bdf8;        /* solo contorno */
-    color: #38bdf8;                   /* texto celeste */
+    background: transparent;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
     transition: 0.3s;
 }
 
 .landing-botones a:hover {
-    background: #38bdf8;              /* se rellena al pasar el mouse */
+    background: #38bdf8;
     color: black;
     transform: translateY(-5px);
 }
 
-
-/* ===== ARREGLO LOGO ===== */
+/* LOGO */
 .logo {
     background-image: url(Cole.ico);
     background-repeat: no-repeat;
@@ -101,25 +107,9 @@ body { font-family: Arial, sans-serif;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    overflow: cover;
 }
 
-/* ===== RESPONSIVE SOLO PARA HERO LANDING ===== */
-@media (max-width: 900px) {
-    .hero-landing {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .landing-botones {
-        justify-content: center;
-    }
-
-    .landing-imagen {
-        margin-top: 40px;
-    }
-}
-/* ===== CORREGIR FONDO BIBLIOGRAFÍA ===== */
+/* SECCIONES */
 #info {
     background: #111827;
     padding: 40px;
@@ -130,16 +120,52 @@ body { font-family: Arial, sans-serif;
     color: #38bdf8;
 }
 
-/* ===== CORREGIR FONDO REDES SOCIALES ===== */
 .social {
     background: #111827;
     padding: 30px;
 }
 
-/* ===== RESTAURAR TAMAÑO ORIGINAL social.png ===== */
 .social img {
-    width: 300px; /* tamaño original que tenía */
+    width: 300px;
     height: auto;
+}
+
+/* ===== RESPONSIVE MEJORADO ===== */
+@media (max-width: 900px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .hero-landing {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+        background-size: 250px;
+        background-position: center top;
+    }
+
+    .landing-contenido h1 {
+        font-size: 32px;
+    }
+
+    .landing-contenido p {
+        font-size: 16px;
+    }
+
+    .landing-botones,
+    .Botones2 {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .social img {
+        width: 200px;
+    }
 }
 
  /*----------------------------------------------------------pagina 1---------------------------------------------*/
